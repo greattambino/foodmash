@@ -1,2 +1,11 @@
 <h1>Hello World!</h1>
 <h3>The time is: <%= Time.now %> </h3>
+
+
+<% @jresp['businesses'].each_with_index do |business, i| %>
+    <%= (i + 1) %>.  Name: <%= business['name'] %><br>
+      &nbsp;&nbsp;&nbsp;&nbsp; -Phone: <%= business['phone'] %><br>
+      &nbsp;&nbsp;&nbsp;&nbsp; -Review Count: <%= business['review_count'] %><br>
+      &nbsp;&nbsp;&nbsp;&nbsp; -Rating: <%= business['rating'] %><br>
+      <br>
+<% end %>
